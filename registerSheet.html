@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.qrcode.js"></script>
+<script type="text/javascript" src="js/qrcode.js"></script>
+
+<div id="gcDiv"></div>
+
+<script>
+    function makeid(length){
+        var result = '';
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVMXYZzxcvbnmasdfghjklqwertyuiop0123456789';
+        var charactersLength = characters.length;
+        for(var i = 0; i < length; i++ ){
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));}
+            return result;
+        }
+
+   var baseUrl = "www.pianon.co.kr/";
+   var url = baseUrl + makeid(24);
+
+    jQuery("#gcDiv").qrcode({   //qrcode 시작
+        render : "canvas",      //table, canvas 형식 두 종류가 있다. 
+        width : 130,            
+        height : 130,           
+        text   : url    //QR코드에 실릴 문자열
+    });
+
+</script>
+
+</body>
+</html>

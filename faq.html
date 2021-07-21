@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>피아노만 켜세요! 피아농</title>
+    <style>
+        .question{
+        font-weight: bold;
+        font-size:1.3rem;
+}
+
+        .main input[type=radio] {
+            display: none;
+        }
+
+        #tab-1:checked~.tab label:nth-child(1),
+        #tab-2:checked~.tab label:nth-child(2),
+        #tab-3:checked~.tab label:nth-child(3),
+        #tab-4:checked~.tab label:nth-child(4),
+        #tab-5:checked~.tab label:nth-child(5) {
+            background-color: #9c11e7;
+            color: #fff;
+            box-shadow: none;
+        }
+
+        .content>div {
+            display: none;
+        }
+
+        #tab-1:checked~.content div:nth-child(1),
+        #tab-2:checked~.content div:nth-child(2),
+        #tab-3:checked~.content div:nth-child(3),
+        #tab-4:checked~.content div:nth-child(4),
+        #tab-5:checked~.content div:nth-child(5) {
+            display: block;
+        }
+
+        .main {
+            margin: 0 auto;
+            min-width: 1380px;
+            max-width: 100%;
+        }
+
+        .tab {
+            overflow: hidden;
+        }
+
+        .tab label {
+            font-size: 18px;
+            cursor: pointer;
+            float: left;
+            width: 25%;
+            text-align: center;
+            padding: 15px 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .content {
+            background-color: #ebdaf562;
+            min-height: 250px;
+        }
+
+        .content>div {
+            padding: 30px;
+            line-height: 1.5;
+            font-size: 17px;
+        }
+    </style>
+
+
+</html>
+
+<!-- Favicon-->
+<link rel="shortcut icon" href="assets/img/logofavi.ico" />
+<!-- Google fonts-->
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+<!-- Third party plugin CSS-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="css/styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="index.html">Pianon</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class=" nav-link js-scroll-trigger" href="index.html">서비스 소개</a></li>
+                    <li class="nav-item"><a class=" nav-link js-scroll-trigger">개발 블로그</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger">YOUTUBE</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="width:100%; height:50%; background-image: url('assets/img/stu2.jpg'); background-size: cover;">
+        <section class="page-section " style="padding-top: 7rem; width:auto; height:auto;" id="servicesform">
+            <div class="container h-100">
+                <div class="row h-100 align-items-start justify-content-start text-start"
+                    style="width:auto;  border-color: azure;">
+                    <div class="col-lg-10 align-self-end">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div style="width:100%; height:auto;">
+        <section class="page-section" style="height:auto; background-color:#f7f7f7;">
+            <div class="container" style="text-align: center; padding-bottom: 10rem;">
+                <div class="row justify-content-center parent" id="serviceInfoParent">
+                    <div data-aos="fade-up" data-aos-duration="2000" class="row first" id="serviceInfo"
+                        style="float:left; display:block; text-align: justify; padding-top: 2rem; padding-left: 2rem;">
+                        <h1 style="padding-bottom: 3rem;"> 자주 묻는 질문 </h1>
+                        <div class="main">
+                            <input type="radio" id="tab-1" name="show" checked />
+                            <input type="radio" id="tab-2" name="show" />
+                            <input type="radio" id="tab-3" name="show" />
+                            <input type="radio" id="tab-4" name="show" />
+                            <input type="radio" id="tab-5" name="show" />
+                            <div class="tab">
+                                <label for="tab-1">악 보</label>
+                                <label for="tab-2">회원정보</label>
+                                <label for="tab-3">연주환경</label>
+                                <label for="tab-4">결제/포인트</label>
+                                <label for="tab-5">기 타</label>
+                            </div>
+                            <div class="content">
+                                <!--악 보-->
+                                <div class="content-dis" style="white-space:pre-line;">
+                                    <span class="question">Q. 악보를 한번 구매하면 계속 소장이 가능한가요?</span>
+                                    A. 네
+                                    </br>
+                                    <span class="question">Q. 한 악보에 들어있는 음표의 개수는 몇개인가요?</span> 
+                                    A. 그러게요
+                                    </br>
+                                    <span class="question">Q. 제가 판매잔데 악보 판매 수익률을 측정할 수 있을까요?</span>
+                                    A. 글쎄요
+                                    </br>
+                                    <span class="question">Q. 한 악보에 들어있는 음표의 개수는 몇개인가요?</span>
+                                    A. 그러게요
+                                    </br>
+                                    <span class="question">Q. 제가 판매잔데 악보 판매 수익률을 측정할 수 있을까요?</span>
+                                    A. 글쎄요
+                                    </br>
+                                    <span class="question">Q. 한 악보에 들어있는 음표의 개수는 몇개인가요?</span>
+                                    A. 그러게요
+                                    </br>
+                                    <span class="question">Q. 제가 판매잔데 악보 판매 수익률을 측정할 수 있을까요?</span>
+                                    A. 글쎄요
+                                </div>
+                                <!--회원정보-->
+                                <div class="content-dis" style="white-space:pre-line;">
+                                <span class="question">Q. 회원 탈퇴를 하고싶습니다. 구매한 악보도 소멸되나요?</span>
+                                    A. 네.
+                                </br>
+                                <span class="question">Q. 선호하는 분위기와 장르를 바꾸고 싶습니다.</span>
+                                    A. 최초 1회 입력을 받고 있으며 이 후, 사용자의 연주 취향에 따른 추천으로 이루어집니다.
+                                </br>
+
+                                <span class="question">Q. 실수로 탈퇴했어요.</span>
+                                    A. 대표님께 전화부탁드립니다.
+                                </br>
+
+                                <span class="question">Q. 로그인이 안됩니다.</span>
+                                    A. 안타깝게 됐군요.
+
+                                </div>
+                                 <!--연주환경-->
+                                 <div class="content-dis" style="white-space:pre-line;">
+                                    <span class="question">Q.피아농에서 일하시는 분들은 다 피아노 연주를 잘하시나요? </span>
+                                    A.  네. 모두 피아노 소곡집 13급 자격을 소지하고 있습니다. 대표님이 조금 더 잘치시는 편입니다.
+                                </br>
+
+                                <span class="question"> Q. 손가락을 다쳐서 맞춤형 건반 번호에 맞게 연주가 불가능합니다. 조정할 수 있습니까?</span>
+                                    A. 죄송합니다.
+
+                                </div>
+                                <!--결제 / 포인트-->
+                                <div class="content-dis" style="white-space:pre-line;">
+                                    <span class="question">Q. 원하지 않은 악보를 결제했습니다. 환불받을 수 있을까요?</span>
+                                    A. 대표님께 문의하세요.
+                                </br>
+                                <span class="question">Q. 광고를 보면 포인트를 쌓을 수 있습니까?</span>
+                                    A. 네.
+                                </br>
+                                  
+                                </div>
+                                <!--기타-->
+                                <div class="content-dis" style="white-space:pre-line;">
+                                    <span class="question">Q. 지수네 집은 어딘가요?</span>
+                                    A. 바로바로 형곡동입니다.
+                                </br>
+
+                                <span class="question"> Q. 피아농 직원들의 소원은 무엇입니까?</span>
+                                    A. 빠른 퇴근입니다.
+
+                                </div>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+    </div>
+
+    <!-- Footer-->
+    <div style="width:100%; height:auto;">
+        <footer class="bg-lig ht py-5" style="background-color: #f1efeffa;">
+            <div class="container">
+                <div class="small text-center text-muted" style="padding-bottom:20px; font-weight: bold;" >
+                    <span onclick="location.href='serviceTerms.html';" style="padding-left: 30px;";> 서비스 이용약관 </span>
+                    <span onclick="location.href='privacyPolicy.html';"> 개인정보 처리방침 </span>
+                    <span onclick="location.href='faq.html';"> FAQ </span>
+                </div>
+                        
+                <div class="small text-center text-muted"><img src="assets/img/logofavi.png" style="width:50px; height:auto; float:right;" onclick="alert('계약번호 123으로 계약이 되어 저작권료를 지불하며 운영되고 있습니다.')">  </div>
+                <div class="small text-center text-muted">상호명 : (주)피아농  | 대표 : 노재훈  | 주소 : 경상북도 구미시 대학로 61 금오공과대학교 벤처창업관 208호</div>
+                <div class="small text-center text-muted">사업자등록번호 : 427-03-01656  | FAX : 0504-208-9192  </div>
+                <div class="small text-center text-muted">문의전화 : 010-5493-9192 | 문의메일 : wogns5493@naver.com </div>
+                <div class="small text-center text-muted">Copyright 2021. Pianon Inc. All rights reserved</div>
+            </div>
+        </footer>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> </script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

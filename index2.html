@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>피아농</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
+
+        #fullpage {
+            position: relative;
+            top: 0px;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+        }
+
+        .fullsection {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        .quick {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100000
+        }
+
+        .quick li {
+            width: 10px;
+            height: 10px;
+            margin-bottom: 10px;
+            border-radius: 15px;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+
+        .quick .on {
+            background: #fff;
+        }
+
+        .fadeinleft {
+            opacity: 0;
+            margin-left: -300px;
+            max-width: 100%;
+        }
+
+        .middle {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+        }
+
+        .parent {
+            width: 110%;
+        }
+
+        .first {
+            display: flex;
+            margin-top: 10%;
+            width: auto;
+        }
+
+        .second {
+            flex: auto;
+            width: 30%;
+        }
+
+        sheetimg {
+            height: 40px;
+            width: 400px;
+            -webkit-animation-name: movingPara;
+            -webkit-animation-duration: 3s;
+            animation-name: movingPara;
+            animation-delay: 2s;
+            animation-duration: 3s;
+        }
+
+
+        @-webkit-keyframes movingPara {
+            from {
+                margin-left: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+            }
+        }
+
+        @keyframes movingPara {
+            from {
+                margin-left: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+            }
+        }
+
+        #serviceInfoParent {
+            display: table;
+        }
+
+        #serviceInfo {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #services {
+            max-width: 50%;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        a {
+            padding-top: 3px;
+        }
+
+        a span {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 30px;
+            height: 50px;
+            margin-left: 200px;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            box-sizing: border-box;
+        }
+
+        a span::before {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            content: '';
+            width: 6px;
+            height: 6px;
+            margin-left: -3px;
+            background-color: #fff;
+            border-radius: 100%;
+            -webkit-animation: sdb 2s infinite;
+            animation: sdb 2s infinite;
+            box-sizing: border-box;
+        }
+
+        @-webkit-keyframes sdb {
+            0% {
+                -webkit-transform: translate(0, 0);
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            80% {
+                -webkit-transform: translate(0, 20px);
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes sdb {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            80% {
+                transform: translate(0, 20px);
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="assets/img/logofavi.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+
+    <!-- Third party plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Pianon</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class=" nav-link js-scroll-trigger" style="font-size: 1.063rem;">개발 블로그</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" style="font-size: 1.063rem;">YOUTUBE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> </script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Masthead-->
+    <header class="masthead" style="background-image: url('assets/img/stu1.jpg'); Filter:fliph();">
+        <div class="container h-100">
+            <div class="row h-100 align-items-start justify-content-start text-start" style="width:auto;">
+                <div class="col-lg-10 align-self-end">
+                    <h1 class=" text-white font-weight-bold animated fadeIn duration-8s " style="font-weight: 1000;">P I
+                        A N O N</h1>
+                    <!-- <img src="assets/img/logowhite.png" style="padding-bottom: 20px;">-->
+                </div>
+                <div class="col-lg-8 align-self-baseline" style="width:100%;">
+                    <p class="text-white-75 font-weight-light mb-5" style=" font-weight: 1000;">맞춤형 피아노 교육 어플리케이션 피아농
+                    </p>
+                    <button type="submit" class=" btn btn-primary btn-xl js-scroll-trigger"
+                        style="width:150px; height:40px;"
+                        href="https://play.google.com/store/search?q=%ED%94%BC%EC %95%84%EB%86%8D&c=apps"><img
+                            src="assets/img/google.png" style=" width:15px; height:auto; padding-right: 5px;"> Google
+                        Play</button>
+                    <button type="submit" class=" btn btn-primary btn-xl js-scroll-trigger"
+                        style="width:150px; height:40px;"><img src="assets/img/apple.png"
+                            style="width:20px; height:auto; padding-right: 5px;"> App Store</button>
+                </div>
+
+                <div class="col-lg-8">
+
+                    <a href="#"><span></span></a>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <div id="fullpage">
+        <div class='quick'>
+            <ul></ul>
+        </div>
+        <div class="fullsection full1" pageNum="1">
+            <div class="row justify-content-center parent" id="serviceInfoParent" style="padding-top:100px">
+                <div data-aos="fade-up" data-aos-duration="2000" class="row first" id="serviceInfo"
+                    style="float:left; display:block; text-align: justify; padding-top: 3.5rem; padding-left: 2rem;">
+                    <h2 class="text-left mt-0 " style=" color:#fff; font-size:40px; line-height:145%;">나만을 위한 <br> 커리큘럼
+                        똑똑하게</h2>
+                    <p style="  color:#fff; padding-top: 20px; font-size:15px; line-height: 170%;">
+                        추억의 포도알로 그 때 그 시절 기억이 새록새록 <br> 다 똑같은 지겨운 커리큘럼은 Bye! <br>이제는 나를 위한, 나에 의한 커리큘럼으로</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-8 second"
+                    style="min-width:auto; height:auto; float:left; display: block; padding-top: 2.5rem; padding-bottom: 3.5rem; ">
+                    <img src="assets/img/curriculm1.png">
+                    <img src="assets/img/curriculum2.png">
+                </div>
+            </div>
+            <div class="fullsection full2" pageNum="2">
+                <div class="row justify-content-center" style="margin: 0 auto;">
+                    <div data-aos="fade-up" data-aos-duration="2000" style=" padding-top: 4rem;">
+                        <h2 style="text-align: center; color:#fff; font-weight: 700; font-size:40px; line-height:145%;">
+                            이제 악보 고르는 건 <br> 3분이면 충분하게</h2>
+                        <div>
+                            <p
+                                style=" text-align: center; color:#fff; padding-top: 20px;  font-size:15px; line-height: 170%;">
+                                날이면 날마다 오는 피아농 악보마켓 <br> 마구 쏟아지는 악보 더미 속 <br>내 취향 한껏 담은 악보들로 <br> 고민할 것 없이 바로 연주</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="2000"
+                        style="padding-top: 2.5rem;  padding-bottom: 3.5rem;">
+                        <img src="assets/img/threemarket.png"
+                            style="display:block; margin: 0 auto; max-width:100%; height:auto;">
+                    </div>
+
+                </div>
+            </div>
+            <div class="fullsection full3" pageNum="3">
+                <div class="row justify-content-center parent" id="serviceInfoParent">
+                    <div data-aos="fade-up" data-aos-duration="2000" class="row first" id="serviceInfo"
+                        style="float:left; display:block; text-align: justify; padding-top: 3.5rem; padding-left: 2rem;">
+                        <h2 class="text-left mt-0" style="color:#fff; font-size:40px;">연습부터 연주까지 <br> 피드백은 완벽하게 </h2>
+                        <p style="  color:#fff; padding-top: 20px; font-size:15px; line-height: 170%;">
+                            내손에 맞게 건반 위 손가락번호, 연주환경, 피드백까지 <br> 이 모든 건 다 피아농에 <br> 더 이상 필요한 건 시작과 노력 </p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-8 second"
+                        style="float:left; display: block; padding-top: 2.5rem; padding-bottom: 3.5rem; ">
+                        <img src="assets/img/curriculum2.png" style="max-width:100%; height:auto">
+                    </div>
+
+                </div>
+            </div>
+            <div class="fullsection full4" pageNum="4">
+                <div class="row justify-content-center " style="margin: 0 auto;">
+                    <div data-aos="fade-up" data-aos-duration="2000" style=" padding-top: 4rem;">
+                        <h2 style="color:#fff; text-align: center; font-weight: 700; font-size:40px; line-height:145%;">
+                            필요한 곳만 쏙쏙 <br> 원포인트로 확실하게</h2>
+                        <div>
+                            <p
+                                style=" text-align: center; color:#fff; padding-top: 20px;  font-size:15px; line-height: 170%;">
+                                내가 원하는 시간, 원하는 멘토로 <br> 저렴하고 효율적인 원포인트 레슨 <br> 내게 맞는 멘토 추천으로 효과도 UP! 실력도 UP!</p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="2000"
+                        style=" margin: 0 auto; padding-top: 2.5rem; width:100%; height:auto; padding-bottom: 3.5rem;">
+                        <img src="assets/img/mentoring1.png" style="float:left; display:inline; margin: 0 auto;">
+                        <img src="assets/img/mentoring2.png" style="float:left; display:inline; margin: 0 auto;">
+                    </div>
+
+                </div>
+            </div>
+            <div class="fullsection full5" pageNum="5">
+                <div class="row justify-content-center parent" id="serviceInfoParent">
+                    <div data-aos="fade-up" data-aos-duration="2000" class="row first" id="serviceInfo"
+                        style="float:left; display:block; text-align: justify; padding-top: 3.5rem; padding-left: 2rem;">
+                        <h2 class="text-left mt-0" style="font-size:40px; color:#fff;">궁금한 건 물어보고 <br> 표현은 자유롭게 </h2>
+                        <p style="  color:#fff; padding-top: 20px; font-size:15px; line-height: 170%;">
+                            내가 한 연주도 자랑하고 <br> 소소한 세상 이야기와 꿀팁 공유까지 <br>위로와 축하가 쏟아지는 따뜻한 피아농 커뮤니티 공간 </p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-8 second"
+                        style="float:left; display: block; padding-top: 2.5rem; padding-bottom: 3.5rem; ">
+                        <img src="assets/img/community1.png" style=" max-width:100%; height:auto">
+                        <img src="assets/img/community2.png" style=" max-width:100%; height:auto">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="fullsection full6" pageNum="6">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" style="padding-top:6.5rem;">
+                    <h2 style="color:#4a4c4e; font-weight: 700; word-break:keep-all">여러분의 악보를 등록하세요!</h2>
+                    <p
+                        style="color:#4a4c4e; font-weight:bolder; padding-top:2rem; word-break: keep-all; font-size:1.063rem">
+                        이제는 PC에서도 간단하게 QR코드 한번으로 피아농에 여러분의
+                        악보를 등록해보세요. </p>
+                    <a class="btn btn-light btn-xl js-scroll-trigger" href="popup();" style="font-size: 1.1rem;">악보
+                        등록</a>
+                </div>
+            </div>
+
+            <footer class="bg-lig ht py-5" style="background-color: #f7f7f7;">
+                <div class="container">
+                    <div class="small text-center text-muted">상호명 : (주)피아농 | 대표 : 노재훈 | 주소 : 경상북도 구미시 대학로 61 금오공과대학교
+                        벤처창업관 208호</div>
+                    <div class="small text-center text-muted">사업자등록번호 : 427-03-01656 | FAX : 0504-208-9192 </div>
+                    <div class="small text-center text-muted">문의전화 : 010-5493-9192 | 문의메일 : wogns5493@naver.com </div>
+                    <div class="small text-center text-muted">Copyright © 2021 by Pianon ALL RIGHTS RESERVED</div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script>
+    $(document).ready(function () {
+        fullset();
+        quickClick();
+    });
+    function fullset() {
+        var pageindex = $("#fullpage > .fullsection").size(); //fullpage 안에 섹션이(.fullsection) 몇개인지 확인하기
+        for (var i = 1; i <= pageindex; i++) {
+            $("#fullpage > .quick > ul").append("<li></li>");
+        }
+        $("#fullpage .quick ul :first-child").addClass("on"); //일단 화면이 로드 되었을때는 퀵버튼에 1번째에 불이 들어오게
+        //마우스 휠 이벤트
+        $(window).bind("mousewheel", function (event) {
+            var page = $(".quick ul li.on");
+            //alert(page.index()+1);  // 현재 on 되어있는 페이지 번호
+            if ($("body").find("#fullpage:animated").length >= 1) return false;
+            //마우스 휠을 위로
+            if (event.originalEvent.wheelDelta >= 0) {
+                var before = page.index();
+                if (page.index() >= 0) page.prev().addClass("on").siblings(".on").removeClass("on");//퀵버튼옮기기
+                var pagelength = 0;
+                for (var i = 1; i < (before); i++) {
+                    pagelength += $(".full" + i).height();
+                }
+                if (page.index() > 0) { //첫번째 페이지가 아닐때 (index는 0부터 시작임)
+                    page = page.index() - 1;
+                    $("#fullpage").animate({ "top": -pagelength + "px" }, 1000, "swing");
+                } else {
+                    alert("첫번째페이지 입니다.");
+                }
+            } else { // 마우스 휠을 아래로	
+                var nextPage = parseInt(page.index() + 1); //다음페이지번호
+                var lastPageNum = parseInt($(".quick ul li").size()); //마지막 페이지번호
+                //현재페이지번호 <= (마지막 페이지 번호 - 1)
+                //이럴때 퀵버튼옮기기
+                if (page.index() <= $(".quick ul li").size() - 1) {
+                    page.next().addClass("on").siblings(".on").removeClass("on");
+                }
+
+                if (nextPage < lastPageNum) { //마지막 페이지가 아닐때만 animate !
+                    var pagelength = 0;
+                    for (var i = 1; i < (nextPage + 1); i++) {
+                        //총 페이지 길이 구하기
+                        //ex) 현재 1번페이지에서 2번페이지로 내려갈때는 1번페이지 길이 + 2번페이지 길이가 더해짐
+                        pagelength += $(".full" + i).height();
+                    }
+                    $("#fullpage").animate({ "top": -pagelength + "px" }, 1000, "swing");
+                }
+                else { // 현재 마지막 페이지 일때는
+                    alert("마지막 페이지 입니다!");
+                };
+
+            }
+        });
+        $(window).resize(function () {
+            //페이지가 100%이기때문에 브라우저가 resize 될때마다 스크롤 위치가 그대로 남아있는것을 방지하기 위해
+            var resizeindex = $(".quick ul li.on").index() + 1;
+
+            var pagelength = 0;
+            for (var i = 1; i < resizeindex; i++) {
+                //총 페이지 길이 구하기
+                //ex) 현재 1번페이지에서 2번페이지로 내려갈때는 1번페이지 길이 + 2번페이지 길이가 더해짐
+                pagelength += $(".full" + i).height();
+            }
+
+            $("#fullpage").animate({ "top": -pagelength + "px" }, 0);
+        });
+    }
+    // 사이드 퀵버튼 클릭 이동
+    function quickClick() {
+        $(".quick li").click(function () {
+            var gnbindex = $(this).index() + 1;
+            var length = 0;
+            for (var i = 1; i < (gnbindex); i++) {
+                length += $(".full" + i).height();
+            }
+            if ($("body").find("#fullpage:animated").length >= 1) return false;
+            $(this).addClass("on").siblings("li").removeClass("on");
+
+            $("#fullpage").animate({ "top": -length + "px" }, 800, "swing");
+            return false;
+        });
+    }
+
+</script>
+
+</html>
